@@ -54,16 +54,23 @@ class SistemaInspeccion:
     def _cargar_sismografos(self):
         with open(self.path_sismografos, 'r', encoding='utf-8') as f:
             datos = json.load(f)
-        return {s["nroSerie"]: Sismografo(
-            nroSerie=s["nroSerie"],
-            estadoActual=Estado(s["estadoActual"]),
-            motivosFueraServicio=[
-                MotivoFueraServicio(
-                    comentario=m["comentario"],
-                    motivoTipo=MotivoTipo(m["motivoTipo"])
-                ) for m in s["motivosFueraServicio"]
-            ]
-        ) for s in datos}
+        return {
+            s["nroSerie"]: Sismografo(
+                nroSerie=s["nroSerie"],
+                estadoActual=Estado(s["estadoActual"]),
+                motivosFueraServicio=[
+                    MotivoFueraServicio(
+                        comentario=m["comentario"],
+                        motivoTipo=MotivoTipo(m["motivoTipo"])
+                    ) for m in s["motivosFueraServicio"]
+                ],
+                # parseo la fecha si viene en el JSON
+                fechaHoraFueraServicio=(
+                    datetime.fromisoformat(s["fechaHoraFueraServicio"])
+                    if s.get("fechaHoraFueraServicio") else None
+                )
+            ) for s in datos
+        }
 
     def _guardar_sismografos(self):
         with open(self.path_sismografos, 'w', encoding='utf-8') as f:
@@ -78,8 +85,14 @@ class SistemaInspeccion:
                     "comentario": m.comentario,
                     "motivoTipo": m.motivoTipo.descripcion
                 } for m in sismografo.motivosFueraServicio
-            ]
+            ],
+            # incluyo la fecha/hora como ISO string o null si no existe
+            "fechaHoraFueraServicio": (
+                sismografo.fechaHoraFueraServicio.isoformat()
+                if sismografo.fechaHoraFueraServicio else None
+            )
         }
+
 
     def _cargar_empleados(self):
         with open(self.path_empleados, 'r', encoding='utf-8') as f:

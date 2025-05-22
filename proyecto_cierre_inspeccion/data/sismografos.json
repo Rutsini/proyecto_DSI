@@ -1,27 +1,37 @@
 [
   {
     "nroSerie": "SISMO-001",
-    "estadoActual": "activo",
-    "motivosFueraServicio": []
+    "estadoActual": "fuera de servicio",
+    "motivosFueraServicio": [
+      {
+        "comentario": "rtyjr",
+        "motivoTipo": "Falla el\u00e9ctrica"
+      }
+    ],
+    "fechaHoraFueraServicio": "2025-05-22T20:00:14.208525"
   },
   {
     "nroSerie": "SISMO-002",
     "estadoActual": "activo",
-    "motivosFueraServicio": []
+    "motivosFueraServicio": [],
+    "fechaHoraFueraServicio": null
   },
   {
     "nroSerie": "SISMO-003",
     "estadoActual": "activo",
-    "motivosFueraServicio": []
+    "motivosFueraServicio": [],
+    "fechaHoraFueraServicio": null
   },
   {
     "nroSerie": "SISMO-004",
     "estadoActual": "activo",
-    "motivosFueraServicio": []
+    "motivosFueraServicio": [],
+    "fechaHoraFueraServicio": null
   },
   {
     "nroSerie": "SISMO-005",
     "estadoActual": "activo",
-    "motivosFueraServicio": []
+    "motivosFueraServicio": [],
+    "fechaHoraFueraServicio": null
   }
 ]

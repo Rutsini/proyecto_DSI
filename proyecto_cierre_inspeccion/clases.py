@@ -36,10 +36,12 @@ class Sismografo:
     nroSerie: str
     estadoActual: Estado
     motivosFueraServicio: List[MotivoFueraServicio] = field(default_factory=list)
+    fechaHoraFueraServicio: Optional[datetime] = None
 
     def ponerFueraDeServicio(self, nuevos_motivos: List[MotivoFueraServicio]):
         self.estadoActual = Estado("fuera de servicio")
         self.motivosFueraServicio.extend(nuevos_motivos)
+        self.fechaHoraFueraServicio = datetime.now()
 
     def setEstadoActual(self, nuevo_estado: str):
         self.estadoActual = Estado(nuevo_estado)
