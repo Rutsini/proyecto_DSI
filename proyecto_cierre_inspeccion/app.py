@@ -34,22 +34,17 @@ def cerrar_orden(orden_id):
         observacion = request.form['observacion']
         motivos = []
 
-        # Solo si está marcado como fuera de servicio
-        if request.form.get('fuera_servicio') == 'on':
-            tipos_seleccionados = request.form.getlist("motivo_tipo")
-            for tipo in tipos_seleccionados:
-                comentario = request.form.get(f"comentario_{tipo}")
-                motivos.append({
-                    "comentario": comentario,
-                    "motivoTipo": tipo
-                })
+        tipos_seleccionados = request.form.getlist("motivo_tipo")
+        for tipo in tipos_seleccionados:
+            comentario = request.form.get(f"comentario_{tipo}")
+            motivos.append({
+                "comentario": comentario,
+                "motivoTipo": tipo
+            })
 
-        try:
-            sistema.cerrar_orden(orden_id, observacion, motivos)
-            flash('Orden cerrada correctamente.', 'success')
-            return redirect(url_for('ver_ordenes'))
-        except Exception as e:
-            flash(str(e), 'danger')
+        sistema.cerrar_orden(orden_id, observacion, motivos)
+        flash('Orden cerrada correctamente.', 'success')
+        return redirect(url_for('ver_ordenes'))
 
     # Este bloque se ejecuta para método GET o si hubo error en POST
     motivos_tipo = sistema.get_motivos_fuera_servicio()
