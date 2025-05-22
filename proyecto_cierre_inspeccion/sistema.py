@@ -94,6 +94,14 @@ class SistemaInspeccion:
 
     def get_sismografo(self, nro_serie):
         return self.sismografos.get(nro_serie)
+    
+    def get_motivos_fuera_servicio(self):
+        return [
+            MotivoTipo("Falla eléctrica"),
+            MotivoTipo("Desgaste mecánico"),
+            MotivoTipo("Interferencia ambiental"),
+            MotivoTipo("Falta de calibración")
+        ]
 
     def cerrar_orden(self, orden_id, observacion, motivos_fuera_servicio):
         orden = self.get_orden_por_id(orden_id)

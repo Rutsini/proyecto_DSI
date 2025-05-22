@@ -34,13 +34,15 @@ def cerrar_orden(orden_id):
         observacion = request.form['observacion']
         motivos = []
 
+        # Solo si está marcado como fuera de servicio
         if request.form.get('fuera_servicio') == 'on':
-            comentario = request.form['comentario']
-            motivo_tipo = request.form['motivo_tipo']
-            motivos.append({
-                "comentario": comentario,
-                "motivoTipo": motivo_tipo
-            })
+            tipos_seleccionados = request.form.getlist("motivo_tipo")
+            for tipo in tipos_seleccionados:
+                comentario = request.form.get(f"comentario_{tipo}")
+                motivos.append({
+                    "comentario": comentario,
+                    "motivoTipo": tipo
+                })
 
         try:
             sistema.cerrar_orden(orden_id, observacion, motivos)
@@ -49,7 +51,10 @@ def cerrar_orden(orden_id):
         except Exception as e:
             flash(str(e), 'danger')
 
-    return render_template('cerrar_orden.html', orden=orden, sismografo=sismografo)
+    # Este bloque se ejecuta para método GET o si hubo error en POST
+    motivos_tipo = sistema.get_motivos_fuera_servicio()
+    return render_template('cerrar_orden.html', orden=orden, motivos_tipo=motivos_tipo)
+
 
 
 if __name__ == '__main__':
