@@ -16,17 +16,8 @@
   },
   {
     "nroSerie": "SISMO-004",
-    "estadoActual": "fuera de servicio",
-    "motivosFueraServicio": [
-      {
-        "comentario": "alta tension",
-        "motivoTipo": "Falla el\u00e9ctrica"
-      },
-      {
-        "comentario": "fallo en l\u00f1a calibracion",
-        "motivoTipo": "Falta de calibraci\u00f3n"
-      }
-    ]
+    "estadoActual": "activo",
+    "motivosFueraServicio": []
   },
   {
     "nroSerie": "SISMO-005",

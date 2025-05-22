@@ -13,12 +13,13 @@
         <form method="post">
             <div class="mb-3">
                 <label for="observacion" class="form-label">Observación</label>
-                <textarea class="form-control" id="observacion" name="observacion" rows="4" required></textarea>
+                <textarea class="form-control" id="observacion" name="observacion" rows="4" required oninput="verificarObservacion()"></textarea>
             </div>
 
             <div class="form-check mb-3">
                 <input class="form-check-input" type="checkbox" name="fuera_servicio" id="fuera_servicio"
-                       onchange="document.getElementById('motivos').style.display = this.checked ? 'block' : 'none';">
+                    disabled
+                    onchange="document.getElementById('motivos').style.display = this.checked ? 'block' : 'none';">
                 <label class="form-check-label" for="fuera_servicio">
                     ¿Sismógrafo fuera de servicio?
                 </label>
@@ -42,6 +43,20 @@
             <a href="{{ url_for('ver_ordenes') }}" class="btn btn-secondary">Cancelar</a>
         </form>
     </div>
+    <script>
+    function verificarObservacion() {
+        const obs = document.getElementById("observacion").value.trim();
+        const checkbox = document.getElementById("fuera_servicio");
+
+        if (obs !== "") {
+            checkbox.disabled = false;
+        } else {
+            checkbox.checked = false;
+            checkbox.disabled = true;
+            document.getElementById('motivos').style.display = 'none';
+        }
+    }
+    </script>
 
 </body>
 </html>
