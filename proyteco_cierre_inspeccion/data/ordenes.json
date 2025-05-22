@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1001,
+    "fechaHoraGeneracion": "2025-05-19T10:00:00",
+    "fechaHoraFinalizacion": "2025-05-20T18:00:00",
+    "fechaHoraCierre": "2025-05-22T15:04:04.994685",
+    "estado": "cerrada",
+    "observacionCierre": "se rompio en un sismo",
+    "esCerrada": true,
+    "sismografoAsignado": "SISMO-001",
+    "responsableInspeccion": "ri@redsismica.gob"
+  },
+  {
+    "id": 1002,
+    "fechaHoraGeneracion": "2025-05-20T10:00:00",
+    "fechaHoraFinalizacion": "2025-05-21T17:45:00",
+    "fechaHoraCierre": "2025-05-22T15:08:08.516834",
+    "estado": "cerrada",
+    "observacionCierre": "no mide bien",
+    "esCerrada": true,
+    "sismografoAsignado": "SISMO-002",
+    "responsableInspeccion": "ri@redsismica.gob"
+  }
+]

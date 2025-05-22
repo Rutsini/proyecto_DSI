@@ -1,0 +1,22 @@
+[
+  {
+    "nroSerie": "SISMO-001",
+    "estadoActual": "fuera de servicio",
+    "motivosFueraServicio": [
+      {
+        "comentario": "ya lo di de baja",
+        "motivoTipo": "Falla el\u00e9ctrica"
+      }
+    ]
+  },
+  {
+    "nroSerie": "SISMO-002",
+    "estadoActual": "fuera de servicio",
+    "motivosFueraServicio": [
+      {
+        "comentario": "se rompio cuando lo quisimos limpiar",
+        "motivoTipo": "Da\u00f1o f\u00edsico"
+      }
+    ]
+  }
+]
