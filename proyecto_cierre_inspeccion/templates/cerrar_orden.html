@@ -13,17 +13,11 @@
         <form method="post">
             <div class="mb-3">
                 <label for="observacion" class="form-label">Observación</label>
-                <textarea class="form-control" id="observacion" name="observacion" rows="4" required oninput="verificarObservacion()"></textarea>
+                <textarea class="form-control" id="observacion" name="observacion" rows="4" required oninput="mostrarMotivosSiHayObservacion()"></textarea>
+
             </div>
 
-            <div class="form-check mb-3">
-                <input class="form-check-input" type="checkbox" name="fuera_servicio" id="fuera_servicio"
-                    disabled
-                    onchange="document.getElementById('motivos').style.display = this.checked ? 'block' : 'none';">
-                <label class="form-check-label" for="fuera_servicio">
-                    ¿Sismógrafo fuera de servicio?
-                </label>
-            </div>
+    
 
             <div id="motivos" style="display: none;">
                 <h5>Motivos de fuera de servicio</h5>
@@ -44,17 +38,11 @@
         </form>
     </div>
     <script>
-    function verificarObservacion() {
-        const obs = document.getElementById("observacion").value.trim();
-        const checkbox = document.getElementById("fuera_servicio");
-
-        if (obs !== "") {
-            checkbox.disabled = false;
-        } else {
-            checkbox.checked = false;
-            checkbox.disabled = true;
-            document.getElementById('motivos').style.display = 'none';
-        }
+    function mostrarMotivosSiHayObservacion() {
+      const obs = document.getElementById("observacion").value.trim();
+      const motivos = document.getElementById("motivos");
+    
+      motivos.style.display = (obs !== "") ? 'block' : 'none';
     }
     </script>
 
