@@ -1,8 +1,13 @@
 [
   {
     "nroSerie": "SISMO-001",
-    "estadoActual": "activo",
-    "motivosFueraServicio": []
+    "estadoActual": "fuera de servicio",
+    "motivosFueraServicio": [
+      {
+        "comentario": "fsjdfhsda",
+        "motivoTipo": "Mal funcionamiento"
+      }
+    ]
   },
   {
     "nroSerie": "SISMO-002",
@@ -11,8 +16,13 @@
   },
   {
     "nroSerie": "SISMO-003",
-    "estadoActual": "activo",
-    "motivosFueraServicio": []
+    "estadoActual": "fuera de servicio",
+    "motivosFueraServicio": [
+      {
+        "comentario": "rewr",
+        "motivoTipo": "Mal funcionamiento"
+      }
+    ]
   },
   {
     "nroSerie": "SISMO-004",
@@ -21,7 +31,12 @@
   },
   {
     "nroSerie": "SISMO-005",
-    "estadoActual": "activo",
-    "motivosFueraServicio": []
+    "estadoActual": "fuera de servicio",
+    "motivosFueraServicio": [
+      {
+        "comentario": "por un sismo",
+        "motivoTipo": "Mal funcionamiento"
+      }
+    ]
   }
 ]
