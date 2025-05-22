@@ -111,15 +111,23 @@ class SistemaInspeccion:
         if orden.esCerrada:
             raise ValueError("La orden ya está cerrada")
 
+        # actualizo la orden
         orden.cerrarOrden(observacion)
 
+        # obtengo el sismógrafo relacionado
         sismografo = self.get_sismografo(orden.sismografoAsignado)
-        if motivos_fuera_servicio:
-            motivos = [
-                MotivoFueraServicio(comentario=m["comentario"], motivoTipo=MotivoTipo(m["motivoTipo"]))
-                for m in motivos_fuera_servicio
-            ]
-            sismografo.ponerFueraDeServicio(motivos)
 
+        # construyo la lista de motivos (puede quedar vacía)
+        motivos = [
+            MotivoFueraServicio(
+                comentario=m["comentario"],
+                motivoTipo=MotivoTipo(m["motivoTipo"])
+            )
+            for m in (motivos_fuera_servicio or [])
+        ]
+        # ¡siempre pongo el sismógrafo fuera de servicio!
+        sismografo.ponerFueraDeServicio(motivos)
+
+        # guardo ambos
         self._guardar_ordenes()
         self._guardar_sismografos()
