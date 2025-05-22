@@ -1,3 +1,4 @@
+import shutil
 import json
 from datetime import datetime
 from clases import OrdenInspeccion, Empleado, Sismografo, Estado, MotivoFueraServicio, MotivoTipo
@@ -8,6 +9,8 @@ class SistemaInspeccion:
         self.path_ordenes = path_ordenes
         self.path_sismografos = path_sismografos
         self.path_empleados = path_empleados
+
+        shutil.copyfile("data/ordenes_default.json", self.path_ordenes)
 
         self.ordenes = self._cargar_ordenes()
         self.sismografos = self._cargar_sismografos()
