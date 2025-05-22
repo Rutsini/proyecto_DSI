@@ -1,3 +1,7 @@
+import webbrowser
+import threading
+import os
+
 from flask import Flask, render_template, request, redirect, url_for, flash
 from sistema import SistemaInspeccion
 
@@ -47,5 +51,8 @@ def cerrar_orden(orden_id):
 
     return render_template('cerrar_orden.html', orden=orden, sismografo=sismografo)
 
+
 if __name__ == '__main__':
+    if os.environ.get('WERKZEUG_RUN_MAIN') == 'true':
+        threading.Timer(1, lambda: webbrowser.open_new("http://localhost:5000")).start()
     app.run(debug=True)
