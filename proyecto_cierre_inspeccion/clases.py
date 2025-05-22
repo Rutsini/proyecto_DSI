@@ -56,6 +56,7 @@ class OrdenInspeccion:
     esCerrada: bool
     sismografoAsignado: str
     responsableInspeccion: str
+    nombreEstacion: str
 
     def cerrarOrden(self, observacion: str):
         self.fechaHoraCierre = datetime.now()

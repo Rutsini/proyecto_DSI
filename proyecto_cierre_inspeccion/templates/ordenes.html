@@ -27,6 +27,7 @@
                     <th>Sismógrafo asignado</th>
                     <th>Fecha Finalización</th>
                     <th>Acción</th>
+                    <th>Estación</th>
                 </tr>
             </thead>
             <tbody>
@@ -34,6 +35,7 @@
                 <tr>
                     <td>{{ orden.id }}</td>
                     <td>{{ orden.sismografoAsignado }}</td>
+                    <td>{{ orden.nombreEstacion }}</td>
                     <td>
                         {% if orden.fechaHoraFinalizacion.strftime %}
                             {{ orden.fechaHoraFinalizacion.strftime('%Y-%m-%d %H:%M') }}

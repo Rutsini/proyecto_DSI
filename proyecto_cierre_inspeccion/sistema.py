@@ -28,7 +28,8 @@ class SistemaInspeccion:
             observacionCierre=o["observacionCierre"],
             esCerrada=o["esCerrada"],
             sismografoAsignado=o["sismografoAsignado"],
-            responsableInspeccion=o["responsableInspeccion"]
+            responsableInspeccion=o["responsableInspeccion"],
+            nombreEstacion=o["nombreEstacion"]
         ) for o in datos]
 
     def _guardar_ordenes(self):
@@ -45,7 +46,8 @@ class SistemaInspeccion:
             "observacionCierre": orden.observacionCierre,
             "esCerrada": orden.esCerrada,
             "sismografoAsignado": orden.sismografoAsignado,
-            "responsableInspeccion": orden.responsableInspeccion
+            "responsableInspeccion": orden.responsableInspeccion,
+            "nombreEstacion": orden.nombreEstacion
         }
 
     def _cargar_sismografos(self):

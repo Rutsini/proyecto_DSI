@@ -18,6 +18,7 @@ def index():
 @app.route('/ordenes')
 def ver_ordenes():
     ordenes = sistema.get_ordenes_finalizadas()
+    ordenes.sort(key=lambda o: o.fechaHoraFinalizacion)
     return render_template('ordenes.html', ordenes=ordenes)
 
 @app.route('/orden/<int:orden_id>', methods=['GET', 'POST'])

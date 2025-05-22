@@ -11,8 +11,13 @@
   },
   {
     "nroSerie": "SISMO-002",
-    "estadoActual": "activo",
-    "motivosFueraServicio": []
+    "estadoActual": "fuera de servicio",
+    "motivosFueraServicio": [
+      {
+        "comentario": "fsldknfsd",
+        "motivoTipo": "Da\u00f1o f\u00edsico"
+      }
+    ]
   },
   {
     "nroSerie": "SISMO-003",
@@ -26,8 +31,13 @@
   },
   {
     "nroSerie": "SISMO-004",
-    "estadoActual": "activo",
-    "motivosFueraServicio": []
+    "estadoActual": "fuera de servicio",
+    "motivosFueraServicio": [
+      {
+        "comentario": "no mide bien los sismos, genera sismos en momentos que no hay sismos",
+        "motivoTipo": "Mal funcionamiento"
+      }
+    ]
   },
   {
     "nroSerie": "SISMO-005",
@@ -35,6 +45,10 @@
     "motivosFueraServicio": [
       {
         "comentario": "por un sismo",
+        "motivoTipo": "Mal funcionamiento"
+      },
+      {
+        "comentario": "no realiza las mediciones de forma correcta",
         "motivoTipo": "Mal funcionamiento"
       }
     ]
