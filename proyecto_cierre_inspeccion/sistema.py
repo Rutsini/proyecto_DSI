@@ -11,6 +11,7 @@ class SistemaInspeccion:
         self.path_empleados = path_empleados
 
         shutil.copyfile("data/ordenes_default.json", self.path_ordenes)
+        shutil.copyfile("data/sismografos_default.json", self.path_sismografos)
 
         self.ordenes = self._cargar_ordenes()
         self.sismografos = self._cargar_sismografos()
