@@ -1,14 +1,9 @@
 [
   {
     "nroSerie": "SISMO-001",
-    "estadoActual": "fuera de servicio",
-    "motivosFueraServicio": [
-      {
-        "comentario": "rtyjr",
-        "motivoTipo": "Falla el\u00e9ctrica"
-      }
-    ],
-    "fechaHoraFueraServicio": "2025-05-22T20:00:14.208525"
+    "estadoActual": "activo",
+    "motivosFueraServicio": [],
+    "fechaHoraFueraServicio": null
   },
   {
     "nroSerie": "SISMO-002",
@@ -33,5 +28,70 @@
     "estadoActual": "activo",
     "motivosFueraServicio": [],
     "fechaHoraFueraServicio": null
+  },
+  {
+    "nroSerie": "SISMO-006",
+    "estadoActual": "activo",
+    "motivosFueraServicio": [],
+    "fechaHoraFueraServicio": null
+  },
+  {
+    "nroSerie": "SISMO-007",
+    "estadoActual": "activo",
+    "motivosFueraServicio": [],
+    "fechaHoraFueraServicio": null
+  },
+  {
+    "nroSerie": "SISMO-008",
+    "estadoActual": "activo",
+    "motivosFueraServicio": [],
+    "fechaHoraFueraServicio": null
+  },
+  {
+    "nroSerie": "SISMO-009",
+    "estadoActual": "activo",
+    "motivosFueraServicio": [],
+    "fechaHoraFueraServicio": null
+  },
+  {
+    "nroSerie": "SISMO-010",
+    "estadoActual": "activo",
+    "motivosFueraServicio": [],
+    "fechaHoraFueraServicio": null
+  },
+  {
+    "nroSerie": "SISMO-011",
+    "estadoActual": "activo",
+    "motivosFueraServicio": [],
+    "fechaHoraFueraServicio": null
+  },
+  {
+    "nroSerie": "SISMO-012",
+    "estadoActual": "activo",
+    "motivosFueraServicio": [],
+    "fechaHoraFueraServicio": null
+  },
+  {
+    "nroSerie": "SISMO-013",
+    "estadoActual": "activo",
+    "motivosFueraServicio": [],
+    "fechaHoraFueraServicio": null
+  },
+  {
+    "nroSerie": "SISMO-014",
+    "estadoActual": "activo",
+    "motivosFueraServicio": [],
+    "fechaHoraFueraServicio": null
+  },
+  {
+    "nroSerie": "SISMO-015",
+    "estadoActual": "fuera de servicio",
+    "motivosFueraServicio": [
+      {
+        "comentario": "al repararlo se rompio",
+        "motivoTipo": "Desgaste mec\u00e1nico"
+      }
+    ],
+    "fechaHoraFueraServicio": "2025-05-22T23:15:12.868541"
   }
 ]

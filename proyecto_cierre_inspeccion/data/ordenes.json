@@ -51,10 +51,10 @@
     "id": 1005,
     "fechaHoraGeneracion": "2025-05-15T09:45:00",
     "fechaHoraFinalizacion": "2025-05-11T19:00:00",
-    "fechaHoraCierre": "2025-05-22T20:00:14.208502",
-    "estado": "cerrada",
-    "observacionCierre": "rtyj",
-    "esCerrada": true,
+    "fechaHoraCierre": null,
+    "estado": "realizada",
+    "observacionCierre": null,
+    "esCerrada": false,
     "sismografoAsignado": "SISMO-001",
     "responsableInspeccion": "ri@redsismica.gob",
     "nombreEstacion": "Estaci\u00f3n Central Norte"
@@ -67,7 +67,7 @@
     "estado": "realizada",
     "observacionCierre": null,
     "esCerrada": false,
-    "sismografoAsignado": "SISMO-002",
+    "sismografoAsignado": "SISMO-006",
     "responsableInspeccion": "ri@redsismica.gob",
     "nombreEstacion": "Estaci\u00f3n Patagonia"
   },
@@ -79,7 +79,7 @@
     "estado": "realizada",
     "observacionCierre": null,
     "esCerrada": false,
-    "sismografoAsignado": "SISMO-003",
+    "sismografoAsignado": "SISMO-007",
     "responsableInspeccion": "ri@redsismica.gob",
     "nombreEstacion": "Estaci\u00f3n Cordillera"
   },
@@ -91,7 +91,7 @@
     "estado": "realizada",
     "observacionCierre": null,
     "esCerrada": false,
-    "sismografoAsignado": "SISMO-004",
+    "sismografoAsignado": "SISMO-008",
     "responsableInspeccion": "ri@redsismica.gob",
     "nombreEstacion": "Estaci\u00f3n Atl\u00e1ntica"
   },
@@ -103,7 +103,7 @@
     "estado": "realizada",
     "observacionCierre": null,
     "esCerrada": false,
-    "sismografoAsignado": "SISMO-005",
+    "sismografoAsignado": "SISMO-009",
     "responsableInspeccion": "ri@redsismica.gob",
     "nombreEstacion": "Estaci\u00f3n Cuenca"
   },
@@ -115,7 +115,7 @@
     "estado": "realizada",
     "observacionCierre": null,
     "esCerrada": false,
-    "sismografoAsignado": "SISMO-001",
+    "sismografoAsignado": "SISMO-010",
     "responsableInspeccion": "ri@redsismica.gob",
     "nombreEstacion": "Estaci\u00f3n Central Norte"
   },
@@ -127,7 +127,7 @@
     "estado": "realizada",
     "observacionCierre": null,
     "esCerrada": false,
-    "sismografoAsignado": "SISMO-002",
+    "sismografoAsignado": "SISMO-011",
     "responsableInspeccion": "ri@redsismica.gob",
     "nombreEstacion": "Estaci\u00f3n Patagonia"
   },
@@ -139,7 +139,7 @@
     "estado": "realizada",
     "observacionCierre": null,
     "esCerrada": false,
-    "sismografoAsignado": "SISMO-003",
+    "sismografoAsignado": "SISMO-012",
     "responsableInspeccion": "ri@redsismica.gob",
     "nombreEstacion": "Estaci\u00f3n Cordillera"
   },
@@ -151,7 +151,7 @@
     "estado": "realizada",
     "observacionCierre": null,
     "esCerrada": false,
-    "sismografoAsignado": "SISMO-004",
+    "sismografoAsignado": "SISMO-013",
     "responsableInspeccion": "ri@redsismica.gob",
     "nombreEstacion": "Estaci\u00f3n Atl\u00e1ntica"
   },
@@ -163,7 +163,7 @@
     "estado": "realizada",
     "observacionCierre": null,
     "esCerrada": false,
-    "sismografoAsignado": "SISMO-005",
+    "sismografoAsignado": "SISMO-014",
     "responsableInspeccion": "ri@redsismica.gob",
     "nombreEstacion": "Estaci\u00f3n Cuenca"
   },
@@ -171,11 +171,11 @@
     "id": 1015,
     "fechaHoraGeneracion": "2025-05-25T10:30:00",
     "fechaHoraFinalizacion": "2025-05-25T20:00:00",
-    "fechaHoraCierre": null,
-    "estado": "realizada",
-    "observacionCierre": null,
-    "esCerrada": false,
-    "sismografoAsignado": "SISMO-001",
+    "fechaHoraCierre": "2025-05-22T23:15:12.868541",
+    "estado": "cerrada",
+    "observacionCierre": "mala medicion",
+    "esCerrada": true,
+    "sismografoAsignado": "SISMO-015",
     "responsableInspeccion": "ri@redsismica.gob",
     "nombreEstacion": "Estaci\u00f3n Central Norte"
   }
