@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -10,11 +11,17 @@
     <div class="container mt-5 text-center">
         <h1 class="mb-4">Red Sísmica - Cierre de Inspección</h1>
 
-        <div class="d-grid gap-3 col-6 mx-auto">
-            <a href="{{ url_for('ver_ordenes') }}" class="btn btn-primary btn-lg">
-                Ver órdenes finalizadas
-            </a>
-        </div>
+        <form method="post" action="/ordenes">
+            <div class="mb-3">
+                <label for="rol" class="form-label">Seleccioná tu rol:</label>
+                <select name="rol" id="rol" class="form-select" required>
+                    <option value="">-- Seleccionar rol --</option>
+                    <option value="Inspector">Inspector</option>
+                    <option value="Coordinador">Coordinador</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg">Buscar Órdenes de Inspección</button>
+        </form>
     </div>
 
 </body>

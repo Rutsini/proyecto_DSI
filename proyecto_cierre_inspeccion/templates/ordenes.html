@@ -10,6 +10,13 @@
 <body class="bg-light">
 
     <div class="container mt-5">
+        
+    <div class="container mt-2 d-flex justify-content-end">
+        <div class="alert alert-info py-2 px-4 mb-0" style="font-size: 1rem;">
+            Rol actual: <strong>{{ rol }}</strong>
+        </div>
+    </div>
+
         <h1 class="mb-4">Órdenes Finalizadas</h1>
 
         {% with messages = get_flashed_messages(with_categories=true) %}

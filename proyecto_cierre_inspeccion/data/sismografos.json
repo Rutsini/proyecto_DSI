@@ -1,9 +1,14 @@
 [
   {
     "nroSerie": "SISMO-001",
-    "estadoActual": "activo",
-    "motivosFueraServicio": [],
-    "fechaHoraFueraServicio": null
+    "estadoActual": "fuera de servicio",
+    "motivosFueraServicio": [
+      {
+        "comentario": "sdsd",
+        "motivoTipo": "Falla el\u00e9ctrica"
+      }
+    ],
+    "fechaHoraFueraServicio": "2025-06-30T17:14:22.901790"
   },
   {
     "nroSerie": "SISMO-002",
@@ -85,13 +90,8 @@
   },
   {
     "nroSerie": "SISMO-015",
-    "estadoActual": "fuera de servicio",
-    "motivosFueraServicio": [
-      {
-        "comentario": "al repararlo se rompio",
-        "motivoTipo": "Desgaste mec\u00e1nico"
-      }
-    ],
-    "fechaHoraFueraServicio": "2025-05-22T23:15:12.868541"
+    "estadoActual": "activo",
+    "motivosFueraServicio": [],
+    "fechaHoraFueraServicio": null
   }
 ]

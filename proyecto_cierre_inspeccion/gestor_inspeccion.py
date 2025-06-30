@@ -4,7 +4,15 @@ from datetime import datetime
 from clases import OrdenInspeccion, Empleado, Sismografo, Estado, MotivoFueraServicio, MotivoTipo
 
 
-class SistemaInspeccion:
+class GestorInspeccion:
+
+    def get_ordenes_por_rol(self, rol):
+        if rol == "Inspector":
+            return [o for o in self.ordenes if o.estado == "realizada"]
+        elif rol == "Coordinador":
+            return [o for o in self.ordenes if o.estado == "finalizada"]
+        else:
+            return []
     def __init__(self, path_ordenes, path_sismografos, path_empleados):
         self.path_ordenes = path_ordenes
         self.path_sismografos = path_sismografos
